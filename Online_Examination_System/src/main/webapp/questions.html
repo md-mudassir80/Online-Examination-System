@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Questions</title>
+</head>
+<body>
+    <main>
+    <div class="navbar">
+       <ul><li>
+           <a href="">mudassir70</a>
+           <a href="index.html" style="background-color: rgb(247, 39, 39);">LogOut</a>
+        </li></ul>
+    </div>
+
+    <div class="qu">
+
+     <h1 style="text-align: center;">Quiz</h1>
+        <form action="QuizServ" method="get" style="max-width:800px;">
+            <label>1. Who invented Java Programming ?</label><br/>
+            <input type="radio" name="q1" value="q1a">a. Guido van Rossum<br/>
+            <input type="radio" name="q1" value="q1b">b. James Gosling<br/>
+            <input type="radio" name="q1" value="q1c">c. Dennis Ritchie<br/>
+            <input type="radio" name="q1" value="q1d">d. Bjarne Stroustrup<br/>
+            <br><br>
+
+            <label>2. Which statement is true about Java?</label><br/>
+            <input type="radio" name="q2" value="q2a">a.  Java is a sequence-dependent programming language<br/>
+            <input type="radio" name="q2" value="q2b">b.  Java is a code dependent programming language<br/>
+            <input type="radio" name="q2" value="q2c">c. Java is a platform-dependent programming language<br/>
+            <input type="radio" name="q2" value="q2d">d.  Java is a platform-independent programming language<br/>
+            <br><br>
+
+            <label>3. Which component is used to compile, debug and execute the java programs?</label><br/>
+            <input type="radio" name="q3" value="q3a">a.  JRE<br/>
+            <input type="radio" name="q3" value="q3b">b.  JIT<br/>
+            <input type="radio" name="q3" value="q3c">c. JDK<br/>
+            <input type="radio" name="q3" value="q3d">d.  JVM<br/>
+            <br><br>
+
+            <label>4. Which one of the following is not a Java feature?</label><br/>
+            <input type="radio" name="q4" value="q4a">a. Object-oriented<br/>
+            <input type="radio" name="q4" value="q4b">b. Use of pointers<br/>
+            <input type="radio" name="q4" value="q4c">c. Portable<br/>
+            <input type="radio" name="q4" value="q4d">d. Dynamic and Extensible<br/>
+            <br><br>
+
+            <label>5. Which of these cannot be used for a variable name in Java5</label><br/>
+            <input type="radio" name="q5" value="q5a">a.  identifier & keyword<br/>
+            <input type="radio" name="q5" value="q5b">b. identifier<br/>
+            <input type="radio" name="q5" value="q5c">c. keyword<br/>
+            <input type="radio" name="q5" value="q5d">d. none of the mentioned<br/>
+            <br><br>
+
+            <label>6. What is the extension of java code files?</label><br/>
+            <input type="radio" name="q6" value="q6a">a. .js<br/>
+            <input type="radio" name="q6" value="q6b">b. .txt<br/>
+            <input type="radio" name="q6" value="q6c">c. .class<br/>
+            <input type="radio" name="q6" value="q6d">d. .java<br/>
+            <br><br>
+
+            <label>7. Which environment variable is used to set the java path?</label><br/>
+            <input type="radio" name="q7" value="q7a">a. MAVEN_Path<br/>
+            <input type="radio" name="q7" value="q7b">b. JavaPATH<br/>
+            <input type="radio" name="q7" value="q7c">c. JAVA<br/>
+            <input type="radio" name="q7" value="q7d">d. JAVA_HOME<br/>
+            <br><br>
+
+            <label>8. Which of the following is not an OOPS concept in Java?</label><br/>
+            <input type="radio" name="q8" value="q8a">a. Polymorphism<br/>
+            <input type="radio" name="q8" value="q8b">b. Inheritance<br/>
+            <input type="radio" name="q8" value="q8c">c. Compilation<br/>
+            <input type="radio" name="q8" value="q8d">d. Encapsulation<br/>
+            <br><br>
+
+            <label>9. What is not the use of “this” keyword in Java?</label><br/>
+            <input type="radio" name="q9" value="q9a">a. Referring to the instance variable when a local variable has the same name<br/>
+            <input type="radio" name="q9" value="q9b">b. Passing itself to the method of the same class<br/>
+            <input type="radio" name="q9" value="q9c">c. Passing itself to another method<br/>
+            <input type="radio" name="q9" value="q9d">d. Calling another constructor in constructor chaining<br/>
+            <br><br>
+
+            <label>10. Which of the following is a type of polymorphism in Java Programming?</label><br/>
+            <input type="radio" name="q10" value="q10a">a. Multiple polymorphism<br/>
+            <input type="radio" name="q10" value="q10b">b. Compile time polymorphism<br/>
+            <input type="radio" name="q10" value="q10c">c. Multilevel polymorphism<br/>
+            <input type="radio" name="q10" value="q10d">d. Execution time polymorphism<br/>
+            <br><br>
+            <input type="submit" value="submit" style="width: 100px;">
+            <input type="reset" value="reset" style="width: 100px; background-color: red;">
+        </form>
+
+    </div>
+
+    <div class="timer">
+        <h4>Remaining Time:</h4>
+        <p id="m">00:<span id="s">00</span></p>
+    </div>
+       
+</main>
+
+<script>
+    const startingMinutes = 20;
+    let time = startingMinutes * 60;
+
+    const countDownEl = document.getElementById("m");
+
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown(){
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 20 ? '0' + seconds : seconds;
+
+        countDownEl.innerHTML = `${minutes}:${seconds}`;
+        time--;
+    }
+</script>
+
+</body>
+</html>

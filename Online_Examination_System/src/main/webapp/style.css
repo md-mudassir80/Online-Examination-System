@@ -1,0 +1,125 @@
+body {
+   margin: 0px;
+   padding: 0px;
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"], 
+  input[type="name"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom:20px;
+    margin-top:20px ;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(11, 131, 250);
+  }
+  h2 {
+      text-align: center;
+      margin: 0px;
+      color: dodgerblue;
+  }
+  #login-form, #search{
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  #signup-form{
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  /* .navbar{ */
+    /* margin: 0px; */
+    /* padding: 0px; */
+    /* height: 50px; */
+    /* background-color: dodgerblue; */
+  /* } */
+  main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 85px auto ;
+    /* grid-gap: 20px; */
+  }
+  ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  .navbar{
+    grid-column: 1/-1;
+    background-color: dodgerblue;
+  }
+  .navbar a{
+    text-decoration: none;
+    float: right;
+    margin: 20px 30px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  .qu{
+    grid-row:2/span 3;
+    grid-column: 1/4;
+    border: 2px solid dodgerblue;
+    border-radius: 15px;
+    margin: 20px;
+    padding-left: 20px;
+  }
+  .timer{ 
+     margin: 50px;
+     float: right;
+     background-color: rgb(247, 245, 237);
+     height: 200px;
+     width: 200px;
+     text-align: center;
+     border: 2px solid dodgerblue;
+     border-radius: 10px;
+  }
+  .timer h4{
+    color: dodgerblue;
+    text-align: center;
+    margin: 10px;
+    margin-top: 50px;
+  }
+  .timer p{
+     width: 70px;
+     height: 32px;
+     background-color: dodgerblue;
+     color: white;
+     font-size: 25px;
+     font-weight: bold;
+     text-align: center;
+     margin: auto;
+     padding: 5px;
+     border-radius: 3px;
+     display: flex;
+  }
+  .qu form{
+    max-width: 790px;
+  }
